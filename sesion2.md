@@ -32,5 +32,5 @@
   ```bash
     git branch <nombre_rama>
   ```
-
+Este comando creará una rama nueva con el nombre seleccionado. Si no se indica ningún parámetro adicional, la rama creada apuntará **HEAD**, es decir, el *último commit de la rama en la que nos encontremos*.
 
