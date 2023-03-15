@@ -28,3 +28,9 @@
     - Se puede separar el trabajo en tareas o subproyectos que no afecten unos a otros.
     - Cada miembro del equipo puede trabajar sin ser interferido por los demás.
 
+#### Crear ramas
+  ```bash
+    git branch <nombre_rama>
+  ```
+
+
