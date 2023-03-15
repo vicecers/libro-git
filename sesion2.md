@@ -36,10 +36,10 @@ Este comando creará una rama nueva con el nombre seleccionado. Si no se indica 
 
 Una alternativa es ejecutar **git checkout -b <nombre_rama>**. Este comando creará una rama con el nombre indicado y cambiará a dicha rama.
 
-#### Crear ramas
+Es posible crear una rama que apunte a un commit o una rama determinada mediante el comando:
   ```bash
-    git branch <nombre_rama>
+    git branch <nombre_rama> <COMMIT_HASH>
+    git branch <nombre_rama> <NOMBRE_RAMA_EXISTENTE>
   ```
-
 
 
