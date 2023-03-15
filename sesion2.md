@@ -41,5 +41,16 @@ Es posible crear una rama que apunte a un commit o una rama determinada mediante
     git branch <nombre_rama> <COMMIT_HASH>
     git branch <nombre_rama> <NOMBRE_RAMA_EXISTENTE>
   ```
+#### Ver ramas disponibles
+  ``` bash
+  git branch
+  ``` 
 
+  Este comando mostrará las *ramas locales* existentes en el repositorio. Si se desea ver las ramas existentes en el remoto (ver sección siguiente) se puede ejecutar **git branch --all**.
+
+#### Cambiar de rama
+  ``` bash
+    git checkout <nombre_rama>
+    git switch <nombre_rama>
+  ```
 
