@@ -83,7 +83,35 @@ Si se produce un conflicto **git quedará en un estado intermedio**: añadirá a
 Resolver los conflictos pasa por **editar el archivo**, localizar los **delimitadores** y *-dejar el archivo como queremos que quede**. Normalmente esta última acción consistirá en decidir *qué cambios son los que queremos dejar y eliminar los delimitadores*. Al final, *el fichero debe quedar tal como queremos que quede*: en ocasiones una de las versiones será la correcta; en otras, la otra versión; en otras, ninguna; en obras, ambas; en otras, algo totalmente distinto.
 
 Una vez resuelto el conflicto en todos los archivos habrá que ejecutar los comandos `git add` y `git commit` para ***crear un commit que resuelva el conflicto***.
+
 #### Eliminar una rama
   ```bash
   git branch -d <nombre_rama>
   ```
+  
+ Este comando eliminará la rama local indicada. **IMPORTANTE**: la eliminación de una rama supone la eliminación del puntero que hace referencia a un determinado commit. Si al eliminar una rama se quedan commits sin referenciar, dichos commits se perderán: pueden recuperarse durante un tiempo solo si se conocen sus /hash/; ~git~ realiza también tareas de limpieza al realizar algunas acciones y procede a limpiar los commits "huérfanos", por lo que pasado un tiempo ni siquiera se podrán recuperar a través de sus /hash/.
+  
+ En el ejemplo siguiente, si se elimina la rama `test1` se perderán los commits `5aebbf7`, `897742a` y `6ba47e7`, ya que no habrá ninguna rama que haga referencia a ellos.
+ 
+ ![image](https://user-images.githubusercontent.com/46388534/225735043-c4f58f12-f6c1-4e7a-b681-7815e6900fc4.png)
+ 
+ 
+ #### Remotos
+Los repositorios remotos son **versiones** del proyecto que están alojadas en un **servidor web** o en una **carpeta** accesible a través de la **red**. 
+
+Los repositorios remotos se almacenan en una forma especial denominada /bare/, que **no dispone de directorio de trabajo*.
+
+Los repositorios remotos pueden estar configurados como **solo lectura** o **lectura/escritura**.
+
+Los repositorios remotos suelen utilizarse como **punto de referencia** de alojamiento del código: es posible realizar **copias** de dicho repositorio remoto denominadas **clones**, que pueden evolucionar de manera **independiente**. Esto hace que git sea un sistema **descentralizado** de gestión de código, ya que **cada clon** es un repositorio **completo** e **independiente** del resto.
+
+Es posible **sincronizar** los cambios de un repositorio remoto a partir de los cambios de un repositorio local y viceversa.
+
+#### Clonar un repositorio
+  ```bash
+  git clone <URL_REPOSITORIO>
+  ```
+  
+
+ 
+ 
