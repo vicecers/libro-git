@@ -55,3 +55,7 @@ Es posible crear una rama que apunte a un commit o una rama determinada mediante
   ```
 
 Cualquiera de los dos comandos anteriores cambiará a la rama indicada. Es posible que el comando falle *si hay cambios en el directorio de trabajo* que no estén integrados en ningún commit: si dichos cambios pueden ser sobreescritos por los cambios de la rama a la que se desea cambiar, `git` abortará el cambio de rama y nos indicará el problema. En ese caso deberemos crear un commit con los cambios que estemos realizando (o bien guardarlos mediante `git stash`) y a continuación volver a ejecutar el comando de cambio de rama.
+
+#### Fusionar una rama
+Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presentes en una rama a la rama en la que nos encontramos actualmente. Para realizar una fusión hay que realizar las siguientes acciones:
+
