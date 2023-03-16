@@ -67,6 +67,8 @@ Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presen
 Si por ejemplo queremos integrar en la rama principal (`master`) los cambios presentes en la rama `feature1`, cambiaremos a la rama principal (si no estamos ya en ella) mediante `git checkout master` y a continuación ejecutaremos `git merge feature1`.
 
 #### Conflictos
-*Al fusionar una rama* pueden producirse *conflictos*. Un conflicto se produce cuando *diferentes commits introducen cambios en las mismas líneas de los mismos archivos*. Si por ejemplo estamos en un commit referenciado por dos ramas y realizamos desde ese punto común un commit en cada una de las ramas de manera que afecten a la misma línea del mismo fichero, se producirá un conflicto *al fusionar una rama en la otra*.
+**Al fusionar una rama** pueden producirse **conflictos**. Un conflicto se produce cuando **diferentes commits introducen cambios en las mismas líneas de los mismos archivos**. Si por ejemplo estamos en un commit referenciado por dos ramas y realizamos desde ese punto común un commit en cada una de las ramas de manera que afecten a la misma línea del mismo fichero, se producirá un conflicto **al fusionar una rama en la otra**.
+
+
 
 
