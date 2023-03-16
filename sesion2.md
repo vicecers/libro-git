@@ -112,6 +112,33 @@ Es posible **sincronizar** los cambios de un repositorio remoto a partir de los 
   git clone <URL_REPOSITORIO>
   ```
   
+  Este comando permite clonar un repositorio remoto a partir de su URL. También es posible indicar una ruta del sistema de ficheros. Por defecto se mostrará la **rama principal** del repositorio remoto. El resto de ramas no aparecen como ramas locales, aunque pueden obtenerse.
+
+  Al clonar un repositorio **se crea una referencia al remoto en el repositorio local** con el nombre `origin` que hace referencia a la URL indicada.
+
+#### Ver remotos
+  ```bash
+  git remote -v
+  ```
+  
+   Este comando permite ver los remotos configurados. Otra alternativa es ejecutar `git remote show <nombre_del_remoto` para ver los detalles del repositorio remoto
+   
+ #### Añadir, eliminar y renombrar remotos
+  ``` bash
+  git remote add <NOMBRE_REMOTO> <URL_REPOSITORIO>   # Añadir remoto
+  git remote rm <NOMBRE_REMOTO>                      # Eliminar remoto
+  git remote rename <NOMBRE_ORIGINAL> <NOMBRE_NUEVO> # Renombrar remoto
+```
+
+  Estos comandos permiten añadir y editar repositorios remotos. Un repositorio local puede tener 0 o más remotos.
+
+#### Traer información del remoto
+```bash
+    # Este comando NO realiza la fusión en la rama local
+    # Si se desean incorporar los cambios habría que realizar un git merge
+    git fetch <NOMBRE_REMOTO>
+```
+
 
  
  
