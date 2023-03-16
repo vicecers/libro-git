@@ -69,6 +69,10 @@ Si por ejemplo queremos integrar en la rama principal (`master`) los cambios pre
 #### Conflictos
 **Al fusionar una rama** pueden producirse **conflictos**. Un conflicto se produce cuando **diferentes commits introducen cambios en las mismas líneas de los mismos archivos**. Si por ejemplo estamos en un commit referenciado por dos ramas y realizamos desde ese punto común un commit en cada una de las ramas de manera que afecten a la misma línea del mismo fichero, se producirá un conflicto **al fusionar una rama en la otra**.
 
+Por ejemplo, en esta imagen podría producirse un conflicto si queremos incorporar los cambios de la rama `master` en la rama `rama1` mediante `git merge master` (siempre que los cambios producidos en los commits afecten a las mismas líneas de los mismos ficheros).
+
+
+![image](https://user-images.githubusercontent.com/46388534/225649649-99007dd5-c7bf-4ad0-baa5-335677c7a174.png)
 
 
 
