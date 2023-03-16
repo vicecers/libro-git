@@ -74,5 +74,11 @@ Por ejemplo, en esta imagen podría producirse un conflicto si queremos incorpor
 
 ![image](https://user-images.githubusercontent.com/46388534/225649649-99007dd5-c7bf-4ad0-baa5-335677c7a174.png)
 
+Al producirse un conflicto, git no sabe qué cambios deben prevalecer: los de la rama A, los de la rama B, los dos, ninguno, algo totalmente distinto,... En este caso **es necesaria la intervención humana**. Git modificará los ficheros afectados incluyendo **delimitadores** para indicar los cambios que vienen de una rama y los que vienen de `HEAD`, es decir, de la rama en la que nos encontremos.
 
+Es importante recalcar que **git no perderá información**: la incluirá toda, junto con los delimitadores para identificar la procedencia de los cambios.
+
+Si se produce un conflicto **git quedará en un estado intermedio**: añadirá al área de preparación (color verde) los archivos que no presenten conflictos e ***indicará los archivos en conflicto***, en color rojo, para que el usuario los edite y resuelva los conflictos.
+
+Resolver los conflictos pasa por **editar el archivo**, localizar los **delimitadores** y *-dejar el archivo como queremos que quede**. Normalmente esta última acción consistirá en decidir *qué cambios son los que queremos dejar y eliminar los delimitadores*. Al final, *el fichero debe quedar tal como queremos que quede*: en ocasiones una de las versiones será la correcta; en otras, la otra versión; en otras, ninguna; en obras, ambas; en otras, algo totalmente distinto.
 
