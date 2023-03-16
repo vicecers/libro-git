@@ -82,3 +82,8 @@ Si se produce un conflicto **git quedará en un estado intermedio**: añadirá a
 
 Resolver los conflictos pasa por **editar el archivo**, localizar los **delimitadores** y *-dejar el archivo como queremos que quede**. Normalmente esta última acción consistirá en decidir *qué cambios son los que queremos dejar y eliminar los delimitadores*. Al final, *el fichero debe quedar tal como queremos que quede*: en ocasiones una de las versiones será la correcta; en otras, la otra versión; en otras, ninguna; en obras, ambas; en otras, algo totalmente distinto.
 
+Una vez resuelto el conflicto en todos los archivos habrá que ejecutar los comandos `git add` y `git commit` para ***crear un commit que resuelva el conflicto***.
+#### Eliminar una rama
+  ```bash
+  git branch -d <nombre_rama>
+  ```
