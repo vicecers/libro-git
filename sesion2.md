@@ -192,7 +192,7 @@ Podemos **asociar una rama** a una rama remota de **varias maneras**:
  
   El bloc de notas de Windows utiliza una codificación de caracteres específica de Windows y además incluye la extensión `.txt` por defecto al final de los nombres de archivo. Por tanto, no es una buena elección para trabajar.
   
-    Las tareas a realizar son:
+  #### Las tareas a realizar son:
 1) Crea una carpeta denominada `S2R1`. Realiza las siguientes acciones en ella:
    1. Crea un repositorio Git.
    2. Crea un fichero denominado `actores.txt`. Añade tres nombres de actores cada uno en una línea distinta.
