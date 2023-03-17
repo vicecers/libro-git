@@ -139,6 +139,10 @@ Es posible **sincronizar** los cambios de un repositorio remoto a partir de los 
     git fetch <NOMBRE_REMOTO>
 ```
 
+  Este comando permite actualizar la información de los repositorios remotos. `git` se conecta al remoto y comprueba si hay nuevos cambios en las ramas remotas; si es así, actualiza los punteros de las ramas remotas del repositorio local para reflejar dichos cambios. **Pero no incorpora los cambios a las ramas locales**.
 
+  Cuando un repositorio tiene configurado un remoto, git crea **en el repositorio local** unos punteros que hacen referencia a las **ramas remotas**. Dichos punteros son similares a las ramas locales, con la peculiaridad de que **no se puede cambiar a una rama remota**. Es decir, las ramas remotas son de **solo lectura**: hacen referencia a la información que tiene git de la situación del repositorio remoto (dónde están las ramas en el repositorio remoto).
+
+  En este punto es necesario insistir en la idea de que git es un sistema **descentralizado**: **git no se está ejecutando continuamente** (no es un demonio o un servicio), por lo que no está en contacto continuo con el remoto; si se producen cambios en el remoto (porque otra persona ha realizado un commit en una rama, por ejemplo), **el repositorio local no se sincronizará automáticamente**, sino que para él la rama remota seguirá en el mismo lugar que estaba cuando realizó el último `fetch`; si a continuación de dicho cambio se ejecuta un nuevo `fetch`, entonces el repositorio local tomará conciencia del nuevo cambio en la rama remota y **actualizará el puntero de dicha rama remota** al nuevo commit.
  
  
