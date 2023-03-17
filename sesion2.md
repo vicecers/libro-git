@@ -184,5 +184,8 @@ Podemos **asociar una rama** a una rama remota de **varias maneras**:
 - Al realizar un **cambio de rama local a una rama existente en el repositorio remoto** mediante `git checkout <rama_existente_en_remoto>` se creará una rama local **con el mismo nombre que la rama remota** y **se realizará la asociación de dichas ramas**. Por ejemplo, si en el remoto existe una rama principal `master` y una segunda rama llamada `rama1`, al realizar el clonado solamente tendremos disponible en local la rama `master`; si a continuación ejecutamos `git checkout rama1` veremos que se crea la rama local `rama1`, que apunta al mismo commit que la rama remota correspondiente y que ambas ramas quedan asociadas.
 - Si creamos una rama local nueva **que no exista en el repositorio remoto**, podemos posicionarnos en dicha rama y a continuación ejecutar el comando `git push -u <nombre_remoṭo> <nombre_rama>` para **crear una rama remota del mismo nombre**, **sincronizarla** con la rama local y **realizar la asociación** de dichas ramas. La opción clave es la opción `-u`, equivalente a `--set-upstream`.
 
+** Tareas
+   Realiza las tareas que se indican a continuación. Incluye las *capturas de pantalla* que se pidan en un documento tipo *LibreOffice* o *Word*.
 
+   Cuando se pida realizar un /commit/ recuerda que previamente hay que añadir los archivos al área de preparación si no se ha indicado antes en las instrucciones. En esos casos, un /commit/ significa ejecutar los comandos ~git add~ y ~git commit~.
  
