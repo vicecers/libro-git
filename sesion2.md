@@ -172,6 +172,17 @@ Es posible **sincronizar** los cambios de un repositorio remoto a partir de los 
     git push <NOMBRE_REMOTO> <NOMBRE_RAMA>
   ```
   
-  
+   Esta operación permite **enviar los commits locales de una rama** a la rama indicada del repositorio remoto. Sería el inverso de `pull`: mientras que `pull` trae cambios del remoto, `push` los envía.
+
+  Tal como pasa con `git pull`, la mayoría de las veces las ramas local y remota están **asociadas**, por lo que si ejecutamos `git push` sin parámetros se enviarán los cambios de la rama en que nos encontremos a la rama remota asociada (la mayoría de las veces tendrán el mismo nombre).
+
+#### Ramas asociadas
+Anteriormente hemos hecho referencia al concepto de **rama asociada**. Una rama asociada es **una rama local** configurada para **hacer referencia a una rama determinada del repositorio remoto**. Si una rama está asociada a una rama remota, al situarnos en dicha rama y ejecutar un `git push` o un `git pull` haremos referencia a la rama remota asociada correspondiente sin necesidad de tener que especificarla en dichos comandos.
+
+Podemos **asociar una rama** a una rama remota de **varias maneras**:
+- Al ejecutar un `git clone` automáticamente se crea una rama local principal (normalmente con el nombre `master` o `main`) asociada a la rama remota principal (`master` o `main`, casi siempre).
+- Al realizar un **cambio de rama local a una rama existente en el repositorio remoto** mediante `git checkout <rama_existente_en_remoto>` se creará una rama local **con el mismo nombre que la rama remota** y **se realizará la asociación de dichas ramas**. Por ejemplo, si en el remoto existe una rama principal `master` y una segunda rama llamada `rama1`, al realizar el clonado solamente tendremos disponible en local la rama `master`; si a continuación ejecutamos `git checkout rama1` veremos que se crea la rama local `rama1`, que apunta al mismo commit que la rama remota correspondiente y que ambas ramas quedan asociadas.
+- Si creamos una rama local nueva **que no exista en el repositorio remoto**, podemos posicionarnos en dicha rama y a continuación ejecutar el comando `git push -u <nombre_remoṭo> <nombre_rama>` para **crear una rama remota del mismo nombre**, **sincronizarla** con la rama local y **realizar la asociación** de dichas ramas. La opción clave es la opción `-u`, equivalente a `--set-upstream`.
+
 
  
