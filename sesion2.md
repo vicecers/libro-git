@@ -144,5 +144,18 @@ Es posible **sincronizar** los cambios de un repositorio remoto a partir de los 
   Cuando un repositorio tiene configurado un remoto, git crea **en el repositorio local** unos punteros que hacen referencia a las **ramas remotas**. Dichos punteros son similares a las ramas locales, con la peculiaridad de que **no se puede cambiar a una rama remota**. Es decir, las ramas remotas son de **solo lectura**: hacen referencia a la información que tiene git de la situación del repositorio remoto (dónde están las ramas en el repositorio remoto).
 
   En este punto es necesario insistir en la idea de que git es un sistema **descentralizado**: **git no se está ejecutando continuamente** (no es un demonio o un servicio), por lo que no está en contacto continuo con el remoto; si se producen cambios en el remoto (porque otra persona ha realizado un commit en una rama, por ejemplo), **el repositorio local no se sincronizará automáticamente**, sino que para él la rama remota seguirá en el mismo lugar que estaba cuando realizó el último `fetch`; si a continuación de dicho cambio se ejecuta un nuevo `fetch`, entonces el repositorio local tomará conciencia del nuevo cambio en la rama remota y **actualizará el puntero de dicha rama remota** al nuevo commit.
+  
+   En resumen: `git fetch` es la única manera de que el repositorio local tenga conciencia de que ha habido cambios en el repositorio remoto.
+
+#### Traer y fusionar cambios del remoto
+  ```bash
+      git pull <NOMBRE_REMOTO> <NOMBRE_RAMA>
+      # Pull = fetch + merge
+  ```
  
+  Un `pull` equivale a dos acciones: un `fetch` y un `merge`. Mediante `fetch`, git comprueba los cambios que hay en las ramas remotas y los refleja en los punteros de las ramas remotas en el repositorio local; a continuación, la acción `merge` incorpora los cambios de la rama remota a la rama local correspondiente.
+
+  Esta operación es una de las más habituales a la hora de sincronizar los cambios con el repositorio remoto. En la mayoría de los casos, las ramas local y remota **están asociadas**: es decir, git ha sido informado de que dicha rama local tiene que sincronizarse con la rama remota correspondiente. Lo más habitual es que ambas ramas (local y remota) tengan **el mismo nombre**. En ese caso bastará con ejecutar `git pull` sin parámetros: git asumirá que si estamos en la rama `rama1`, por ejemplo, tiene que sincronizarse con la rama `rama1` remota.
+  
+  
  
