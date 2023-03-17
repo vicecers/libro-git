@@ -234,5 +234,5 @@ Podemos **asociar una rama** a una rama remota de **varias maneras**:
    3. Comprueba que aparecen los 5 nombres de directores esperados.
 
 ### Entrega de la tarea
-Guarda el fichero con las capturas en formato **PDF** y nómbralo según el patrón `APELLIDOS_NOMBRE_sesion2.pdf`. La entrega del fichero se realizará a través de la plataforma Moodle del Cefire.
+Guarda el fichero con las capturas en formato **PDF** y nómbralo según el patrón `APELLIDOS_NOMBRE_sesion2.pdf`. La entrega del fichero se realizará a través de la plataforma Classroom.
   
