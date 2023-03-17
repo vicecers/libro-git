@@ -228,11 +228,11 @@ Podemos **asociar una rama** a una rama remota de **varias maneras**:
    4. Cambia a la rama `master`.
    5. Incorpora los cambios de la rama `version1` a la rama `master`.
    6. Sube la rama `master` actualizada al servidor. Adjunta captura de pantalla del resultado del comando.
-5) Vuelve de nuevo a la carpeta `S2R2` y realiza las siguientes acciones:
+5) Vuelve de nuevo a la carpeta `S2R2` y en la rama master realiza las siguientes acciones:
    1. Obtén los cambios que hay en el repositorio remoto **sin fusionarlos en la rama local**. Adjunta captura de pantalla del resultado del comando utilizado.
    2. Actualiza la rama `master` local con el contenido de la rama `master` del repositorio remoto. Adjunta captura de pantalla del resultado del comando utilizado.
    3. Comprueba que aparecen los 5 nombres de directores esperados.
 
 ### Entrega de la tarea
-    Guarda el fichero con las capturas en formato **PDF** y nómbralo según el patrón `APELLIDOS_NOMBRE_sesion2.pdf`. La entrega del fichero se realizará a través de la plataforma Moodle del Cefire.
+Guarda el fichero con las capturas en formato **PDF** y nómbralo según el patrón `APELLIDOS_NOMBRE_sesion2.pdf`. La entrega del fichero se realizará a través de la plataforma Moodle del Cefire.
   
